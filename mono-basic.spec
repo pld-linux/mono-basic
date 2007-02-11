@@ -1,42 +1,28 @@
-# TODO: wait for mono-basic usable with just mono, without MSVC
 Summary:	MonoBASIC compiler for mono
 Summary(pl):	Kompilator MonoBASIC dla mono
 Name:		mono-basic
-Version:	1.1.17
-Release:	0.1
-License:	MIT-like
+Version:	1.2.3
+Release:	1
+License:	MIT-like/LGPL
 Group:		Development/Languages
-#Source0Download: http://go-mono.com/sources-stable/
-Source0:	http://go-mono.com/sources/mono-basic/%{name}-%{version}.zip
-# no sense to fill distfiles now, it still requires MSVS
-# NoSource0-md5:	0a32a7b12b90e35249caefb3e85c4245
+Source0:	http://go-mono.com/sources/mono-basic/%{name}-%{version}.tar.gz
+# Source0-md5:	8cd1473154ca2edfb3220721eadc3e0f
 URL:		http://www.mono-project.org/
 BuildRequires:	mono-csharp
-BuildRequires:	zip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-MonoBASIC compiler for mono.
+Visual Basic.Net(TM) compiler for mono.
 
 %description -l pl
-Kompilator MonoBASIC dla mono.
-
-%package runtime
-Summary:	MonoBASIC runtime library
-Summary(pl):	Biblioteka uruchomieniowa MonoBASIC
-Group:		Libraries
-
-%description runtime
-MonoBASIC runtime library.
-
-%description runtime -l pl
-Biblioteka uruchomieniowa MonoBASIC.
+Kompilator Visual Basic.Net(TM) dla mono.
 
 %prep
 %setup -q
 
 %build
-# TODO
+./configure --prefix=%{_prefix}
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -49,7 +35,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-
-%files runtime
-%defattr(644,root,root,755)
-%doc vbruntime/TODO.txt
+%attr(755,root,root) %{_bindir}/vbnc
+%{_prefix}/lib/mono/2.0/*
+%exclude %{_prefix}/lib/mono/2.0/*.mdb
+%{_prefix}/lib/mono/gac/Microsoft.VisualBasic
+%exclude %{_prefix}/lib/mono/gac/*/*/*.mdb
