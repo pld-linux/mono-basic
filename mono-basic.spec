@@ -9,6 +9,7 @@ Source0:	http://go-mono.com/sources/mono-basic/%{name}-%{version}.tar.gz
 # Source0-md5:	8cd1473154ca2edfb3220721eadc3e0f
 URL:		http://www.mono-project.org/
 BuildRequires:	mono-csharp
+ExcludeArch:	i386
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
