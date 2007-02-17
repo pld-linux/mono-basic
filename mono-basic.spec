@@ -21,7 +21,8 @@ Kompilator Visual Basic.Net(TM) dla mono.
 %setup -q
 
 %build
-./configure --prefix=%{_prefix}
+./configure \
+	--prefix=%{_prefix}
 %{__make}
 
 %install
