@@ -1,5 +1,5 @@
 Summary:	MonoBASIC compiler for mono
-Summary(pl.UTF-8):	Kompilator MonoBASIC dla mono
+Summary(pl):	Kompilator MonoBASIC dla mono
 Name:		mono-basic
 Version:	1.2.3
 Release:	1
@@ -14,14 +14,15 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Visual Basic.Net(TM) compiler for mono.
 
-%description -l pl.UTF-8
+%description -l pl
 Kompilator Visual Basic.Net(TM) dla mono.
 
 %prep
 %setup -q
 
 %build
-./configure --prefix=%{_prefix}
+./configure \
+	--prefix=%{_prefix}
 %{__make}
 
 %install
