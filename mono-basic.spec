@@ -5,6 +5,7 @@ Version:	1.2.4
 Release:	1
 License:	MIT-like/LGPL
 Group:		Development/Languages
+#Source0Download: http://go-mono.com/sources-stable/
 Source0:	http://go-mono.com/sources/mono-basic/%{name}-%{version}.tar.bz2
 # Source0-md5:	9d159451f6636d9003f7ac4f92c07ecc
 URL:		http://www.mono-project.org/
