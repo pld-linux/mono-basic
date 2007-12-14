@@ -1,13 +1,13 @@
 Summary:	MonoBASIC compiler for mono
 Summary(pl.UTF-8):	Kompilator MonoBASIC dla mono
 Name:		mono-basic
-Version:	1.2.4
+Version:	1.2.6
 Release:	1
 License:	MIT-like/LGPL
 Group:		Development/Languages
 #Source0Download: http://go-mono.com/sources-stable/
 Source0:	http://go-mono.com/sources/mono-basic/%{name}-%{version}.tar.bz2
-# Source0-md5:	9d159451f6636d9003f7ac4f92c07ecc
+# Source0-md5:	c33df73a581d38b79e0d20019878f70f
 URL:		http://www.mono-project.org/
 BuildRequires:	mono-csharp
 ExcludeArch:	i386
