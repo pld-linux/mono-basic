@@ -9,7 +9,7 @@ Group:		Development/Languages
 Source0:	http://ftp.novell.com/pub/mono/sources/mono-basic/%{name}-%{version}.tar.bz2
 # Source0-md5:	b4fec9875353ce0aeeb27d795bfa1d58
 URL:		http://www.mono-project.com/
-BuildRequires:	mono-csharp
+BuildRequires:	mono-csharp >= 2.8
 ExcludeArch:	i386
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
