@@ -2,7 +2,7 @@ Summary:	MonoBASIC compiler for mono
 Summary(pl.UTF-8):	Kompilator MonoBASIC dla mono
 Name:		mono-basic
 Version:	2.10
-Release:	1
+Release:	2
 License:	MIT-like/LGPL
 Group:		Development/Languages
 # latest downloads summary at http://ftp.novell.com/pub/mono/sources-stable/
