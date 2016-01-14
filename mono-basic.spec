@@ -1,14 +1,14 @@
 Summary:	MonoBASIC compiler for mono
 Summary(pl.UTF-8):	Kompilator MonoBASIC dla mono
 Name:		mono-basic
-Version:	3.8
+Version:	4.0.1
 Release:	1
 License:	MIT (libraries), LGPL v2.1+ (compiler)
 Group:		Development/Languages
 Source0:	http://download.mono-project.com/sources/mono-basic/%{name}-%{version}.tar.bz2
-# Source0-md5:	018b4daf49c55e133b84b8a19fc172e2
+# Source0-md5:	e2d4a4c121f0e1f42c5769b14bd4de87
 URL:		http://www.mono-project.com/
-BuildRequires:	mono-csharp >= 3.8
+BuildRequires:	mono-csharp >= 4.0
 ExclusiveArch:	%{ix86} %{x8664} arm ia64 mips ppc ppc64 s390x sparc sparcv9 sparc64
 ExcludeArch:	i386
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -42,8 +42,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/vbnc
 %attr(755,root,root) %{_bindir}/vbnc2
 %{_mandir}/man1/vbnc.1*
-%{_prefix}/lib/mono/2.0/Microsoft.VisualBasic.dll
-%{_prefix}/lib/mono/4.0/Microsoft.VisualBasic.dll
 %{_prefix}/lib/mono/4.5/Microsoft.VisualBasic.dll
 %{_prefix}/lib/mono/4.5/Mono.Cecil.VB.dll
 %{_prefix}/lib/mono/4.5/Mono.Cecil.VB.Mdb.dll
