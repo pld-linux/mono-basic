@@ -1,14 +1,16 @@
+%include	/usr/lib/rpm/macros.mono
 Summary:	MonoBASIC compiler for mono
 Summary(pl.UTF-8):	Kompilator MonoBASIC dla mono
 Name:		mono-basic
-Version:	4.0.1
+Version:	4.6
 Release:	1
 License:	MIT (libraries), LGPL v2.1+ (compiler)
 Group:		Development/Languages
 Source0:	http://download.mono-project.com/sources/mono-basic/%{name}-%{version}.tar.bz2
-# Source0-md5:	e2d4a4c121f0e1f42c5769b14bd4de87
+# Source0-md5:	7e6a4799c2780ed9f0798373a0523162
 URL:		http://www.mono-project.com/
 BuildRequires:	mono-csharp >= 4.0
+BuildRequires:	rpmbuild(monoautodeps)
 ExclusiveArch:	%{ix86} %{x8664} arm ia64 mips ppc ppc64 s390x sparc sparcv9 sparc64
 ExcludeArch:	i386
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
