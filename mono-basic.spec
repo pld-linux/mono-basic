@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.mono
 Summary:	MonoBASIC compiler for mono
 Summary(pl.UTF-8):	Kompilator MonoBASIC dla mono
 Name:		mono-basic
