@@ -14,6 +14,9 @@ ExclusiveArch:	%{ix86} %{x8664} %{arm} ia64 mips ppc ppc64 s390x sparc sparcv9 s
 ExcludeArch:	i386
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+# no native code here
+%define		_enable_debug_packages	0
+
 %description
 Visual Basic.Net(TM) compiler for mono.
 
